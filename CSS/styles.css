@@ -71,3 +71,21 @@ p2{
     opacity: 50%;
     font-weight: 500;
 }
+
+.gallery{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+    margin:0 auto;
+}
+
+.gallery a{
+    margin: 20px;
+    border-radius: 5px;
+    overflow:hidden;
+}
+
+.gallery a img{
+    object-fit:cover;
+}
