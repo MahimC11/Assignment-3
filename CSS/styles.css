@@ -2,6 +2,11 @@
 text-align: right;
 }
 
+.align-center{
+    text-align: center;
+    align-items: center;
+}
+
 .fit-image{
     width: 176px;
     height: 176px;
@@ -24,6 +29,7 @@ text-align: right;
 .thumbnail-size{
     height: 120px;
     width: 120px;
+    margin:15px;
 }
 
 .padding{
@@ -86,6 +92,140 @@ p2{
     overflow:hidden;
 }
 
-.gallery a img{
-    object-fit:cover;
+
+.cart{
+    border: none;
+}
+
+.lightbox-img-size{
+    height:600px;
+    width:600px;
+}
+
+.lightbox-thumbnail-size{
+    height:100px;
+    width:100px;
+}
+
+
+/*CSS For Lightbox*/
+.row > .column {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:hsl(0, 0%, 0%, 0.75)
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width:600px;
+    height:600px;
+    border-radius: 400px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top:-65px;
+    right: 0px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: hsl(26, 100%, 55%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+    width:600px;
+    height:600px;
+    
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color:white;
+    font-size: 0px;
+    border-radius: 50%;
+    height:60px;
+    width:60px;
+  }
+  
+/* Position the "next button" to the right */
+.next {
+  right: -25px;
+  border-radius: 50%;
+  text-align:  center;
+}
+/* Position the "next button" to the right */
+.prev {
+  left: -25px;
+  text-align: center;    
+}
+
+img.demo {
+  opacity: 1;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-opacity:hover {
+  opacity: 0.6;
+}
+
+.next-pos{
+  padding-top:5px;
+  padding-left:5px;
+}
+
+.prev-pos{
+  padding-top:5px;
+  padding-right:5px;
 }

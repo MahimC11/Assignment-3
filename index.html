@@ -12,13 +12,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@600&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
         <!--BOOTSTRAP CDN-->
         <link rel="stylesheet" href="CSS/Styles.css">
-        <link rel="stylesheet" href="dist/css/lightbox.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"/>
 
     </head>
     <body>
@@ -49,7 +47,7 @@
           </div>
                   
             <div class="navbar-nav m-auto align-right">
-              <button><img src="Images/icon-cart.svg" alt="Shopping Cart"></button>
+              <button class="cart"><img src="Images/icon-cart.svg" alt="Shopping Cart"></button>
               <img src="Images/image-avatar.png" alt="Avatar">
             </div>
 
@@ -59,27 +57,54 @@
       <div class="container">
         <div class="row padding">
             <div class="col">
-              area for main image
-              <div class ="gallery">
-                <a href = "Images/image-product-1.jpg">
-                  <img src="Images/image-product-1.jpg" class="rounded-corner img-size">
-                </a>
-
-                <a href = "Images/image-product-1.jpg">
-                  <img src="Images/image-product-1-thumbnail.jpg" class="thumbnail-size rounded-corner-thumbnail">
-                </a>
-                <a href = "Images/image-product-2.jpg">
-                  <img src="Images/image-product-2-thumbnail.jpg" class="thumbnail-size rounded-corner-thumbnail">
-                </a>
-                <a href = "Images/image-product-3.jpg">
-                  <img src="Images/image-product-3-thumbnail.jpg" class="thumbnail-size rounded-corner-thumbnail">
-                </a>
-                <a href = "Images/image-product-4.jpg">
-                  <img src="Images/image-product-4-thumbnail.jpg" class="thumbnail-size rounded-corner-thumbnail">
-                </a>
-    
-              </div>
+              <img src="Images/image-product-1.jpg" onclick="openModal();currentSlide(1)" class="hover-opacity rounded-corner img-size">
+              
+              <img src="Images/image-product-1-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+              <img src="Images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(2)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+              <img src="Images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(3)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+              <img src="Images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(4)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
             </div>
+
+            <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="mySlides">
+      <img src="Images/image-product-1.jpg" style="width:100%" class="rounded-corner">
+    </div>
+
+    <div class="mySlides">
+      <img src="Images/image-product-2.jpg" style="width:100%" class="rounded-corner">
+    </div>
+
+    <div class="mySlides">
+      <img src="Images/image-product-3.jpg" style="width:100%" class="rounded-corner">
+    </div>
+
+    <div class="mySlides">
+      <img src="Images/image-product-4.jpg" style="width:100%" class="rounded-corner">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;<img src="Images/icon-previous.svg" class="prev-pos"></a>
+    <a class="next" onclick="plusSlides(1)">&#10095;<img src="Images/icon-next.svg" class="next-pos"></a>
+
+    <!-- Thumbnail image controls -->
+    <div class="align-center">
+      <img class="demo thumbnail-size rounded-corner-thumbnail lightbox-thumbnail-size hover-opacity" src="Images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)">
+ 
+      <img class="demo thumbnail-size rounded-corner-thumbnail lightbox-thumbnail-size hover-opacity" src="Images/image-product-2-thumbnail.jpg" onclick="currentSlide(2)">
+
+      <img class="demo thumbnail-size rounded-corner-thumbnail lightbox-thumbnail-size hover-opacity" src="Images/image-product-3-thumbnail.jpg" onclick="currentSlide(3)">
+
+      <img class="demo thumbnail-size rounded-corner-thumbnail lightbox-thumbnail-size hover-opacity" src="Images/image-product-4-thumbnail.jpg" onclick="currentSlide(4)">
+    </div>
+
+  </div>
+</div>
+
+
+
             <div class="col">
               <h3> Sneaker Company </h3>
 
@@ -100,9 +125,6 @@
         </div>
       </div>
           <!--SCRIPTS-->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js">
-          <!--JAVASCRIPT CDN-->
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
           <script src="JS/script.js"></script>
 
     </body>
