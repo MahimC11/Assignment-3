@@ -41,18 +41,3 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
-
-var total = 0;
-
-function add(n){
-    total += n;
-    document.getElementById("total").innerHTML = total;
-}
-
-function remove(n){
-  if(total > 0){
-    total -= n;
-    document.getElementById("total").innerHTML = total;
-  }
-
-}
