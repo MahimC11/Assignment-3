@@ -47,8 +47,33 @@
           </div>
                   
             <div class="navbar-nav m-auto align-right">
-              <button class="cart"><img src="Images/icon-cart.svg" alt="Shopping Cart"></button>
-              <img src="Images/image-avatar.png" alt="Avatar">
+              <button class="cart" id ="cartBtn"><img src="Images/icon-cart.svg" alt="Shopping Cart"></button>
+                <div id ="cartModal" class="modal-cart">
+                  <div class ="modal-cart-content">
+                    <span class="close">&times;</span>
+                    <p class ="cart-title"> Cart </p>
+
+                    <p class = "cart-items" id="empty">Your Cart Is Empty.</p>
+
+                    <div class="cart-list" id="hidden">
+                      <div>
+                        <img src="Images/image-product-1-thumbnail.jpg" class = "rounded-corner-thumbnail cart-thumbnail">
+                        <p class="align-center-cart">Fall limited Edition Sneakers<br>
+                        $125.00 X 
+                        <span id= "cartQuantity"></span>
+                        <span class = "bold" id="cost"></p> 
+                        <button onclick="reset()" class = "button" id = "delete"><img src="Images/icon-delete.svg"></button> <br><br>
+                      </div>  
+
+                      <button class = "checkoutBtn"> Checkout</button>
+
+                    </div>
+                    
+                  </div>
+
+                </div>
+
+              <img src="Images/image-avatar.png" alt="Avatar" class = "avatar">
             </div>
 
                 
@@ -122,14 +147,14 @@
                     remove
                   </button>
 
-                  <p><a id="total">0</a></p>
+                  <p><a id="quantity">0</a></p>
 
                   <button onclick="add(1)" id="add">
                     add
                   </button>
                 </div>
 
-                <button class ="add-to-cart">Add To Cart</button>
+                <button onclick="updateCart()" class ="add-to-cart">Add To Cart</button>
               </div>
               
             </div>
@@ -141,6 +166,7 @@
       </div>
           <!--SCRIPTS-->
           <script src="JS/script.js"></script>
+          <script src="JS/ShoppingCart.js"></script>
 
     </body>
 </html>
