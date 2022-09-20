@@ -137,25 +137,27 @@
               
               <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the wheather can offer.</p>
             
-              <h2>$125.00 </h2> 
-              <span class="sale"> 50% </span><br>
+              <div><h2 class = "price">$125.00</h2> <span class="sale"> 50% </span><br> </div>
               <p2>$250.00</p2>
               
-              <div class="row padding">
-                <div class="quantitiy">
-                  <button onclick="remove(1)" id="remove">
-                    remove
-                  </button>
+              <div class="row padding add-to-cart-container">
+                <div class="left">
+                  <div class="quantity">
+                    <button onclick="remove(1)" id="remove">
+                      <img src="Images/icon-minus.svg" id="remove-icon">
+                    </button>
+                    
+                    <a id="quantity">0</a>
 
-                  <p><a id="quantity">0</a></p>
-
-                  <button onclick="add(1)" id="add">
-                    add
-                  </button>
+                    <button onclick="add(1)" id="add">
+                      <img src="Images/icon-plus.svg" id="add-icon">
+                    </button>
+                  </div>
                 </div>
-
-                <button onclick="updateCart()" class ="add-to-cart">Add To Cart</button>
-              </div>
+                <div class = "right">
+                  <button onclick="updateCart()" class ="add-to-cart"><img src="Images/icon-cart.svg"> Add To Cart</button>
+                </div>
+                </div>
               
             </div>
 

@@ -67,10 +67,10 @@ p{
 	height: 30px;
 	width: 50px;
 	text-align: center;
-    border-radius:5px;
-    font-weight:500;
-    padding-top:2px;
-    }
+  border-radius:5px;
+  font-weight:500;
+  padding-top:2px;
+  }
 
 p2{
     text-decoration: line-through;
@@ -240,7 +240,6 @@ img.hover-shadow {
   box-shadow: 20px 20px rgba(0,0,0, 0.01);
 }
 
-/* Modal Content */
 .modal-content-cart {
   background-color: #fefefe;
   margin: auto;
@@ -311,4 +310,70 @@ img.hover-shadow {
 
 .bold{
   font-weight: 900;
+}
+
+.add-to-cart{
+  border-radius: 10px;
+  background-color: hsl(26, 100%, 55%);
+  border:none;
+  height:60px;
+  width:300px;
+  color:white;
+  font-weight: 700;
+  box-shadow: 0 5px 15px 0 hsl(25, 100%, 94%)
+}
+
+.add-to-cart:hover{
+  opacity: 0.5;
+}
+
+.quantity{
+  background: hsl(223, 64%, 98%);
+  border-radius: 20px;
+  padding:10px;
+  height:60px;
+  width:240px;
+  float:left;
+  text-align: center;
+  align-items: center;
+
+}
+
+#remove{
+  float:left;
+  width:35%;
+  align-items: left;
+  border:none;
+  background:none;
+}
+
+#add{
+  float:right;
+  width:35%;
+  align-items: right;
+  border:none;
+  background:none;
+}
+
+#quantity{
+  font-weight: 700;
+  text-align: center;
+  padding:5px;
+}
+
+.left{
+  float:left;
+  width:30%;
+}
+
+.right{
+  float:right;
+  width: 70%;
+  align-items: right;
+  text-align: right;
+}
+
+#add:hover,
+#remove:hover{
+  opacity: 0.5;
 }
