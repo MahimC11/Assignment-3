@@ -20,6 +20,7 @@
 
     </head>
     <body>
+      <!--Navbar-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light padding-nav">
           <a class="navbar-brand" href="#"><img src="Images/logo.svg" alt="Logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +47,7 @@
             </ul>
           </div>
                   
-            <div class="navbar-nav m-auto align-right">
+            <div class="navbar-nav align-right">
               <button class="cart" id ="cartBtn"><img src="Images/icon-cart.svg" alt="Shopping Cart"></button>
                 <div id ="cartModal" class="modal-cart">
                   <div class ="modal-cart-content">
@@ -83,14 +84,16 @@
         <div class="row padding">
             <div class="col">
               <img src="Images/image-product-1.jpg" onclick="openModal();currentSlide(1)" class="hover-opacity rounded-corner img-size">
-              
-              <img src="Images/image-product-1-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
-              <img src="Images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(2)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
-              <img src="Images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(3)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
-              <img src="Images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(4)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+
+              <div id ="hide-thumbnail">
+                <img src="Images/image-product-1-thumbnail.jpg" onclick="openModal();currentSlide(1)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+                <img src="Images/image-product-2-thumbnail.jpg" onclick="openModal();currentSlide(2)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+                <img src="Images/image-product-3-thumbnail.jpg" onclick="openModal();currentSlide(3)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+                <img src="Images/image-product-4-thumbnail.jpg" onclick="openModal();currentSlide(4)" class="hover-opacity thumbnail-size rounded-corner-thumbnail">
+              </div>
             </div>
 
-            <!-- The Modal/Lightbox -->
+            <!--Modal for the lightbox-->
 <div id="myModal" class="modal">
   <div class="modal-content">
     <span class="close cursor" onclick="closeModal()">&times;</span>
@@ -110,11 +113,11 @@
       <img src="Images/image-product-4.jpg" style="width:100%" class="rounded-corner">
     </div>
 
-    <!-- Next/previous controls -->
+    <!--Previous and Next Buttons for lightbox-->
     <a class="prev" onclick="plusSlides(-1)">&#10094;<img src="Images/icon-previous.svg" class="prev-pos"></a>
     <a class="next" onclick="plusSlides(1)">&#10095;<img src="Images/icon-next.svg" class="next-pos"></a>
 
-    <!-- Thumbnail image controls -->
+    <!--Opens lightbox gallery when you click on thumbnails-->
     <div class="align-center">
       <img class="demo thumbnail-size rounded-corner-thumbnail lightbox-thumbnail-size hover-opacity" src="Images/image-product-1-thumbnail.jpg" onclick="currentSlide(1)">
  
@@ -140,6 +143,7 @@
               <div><h2 class = "price">$125.00</h2> <span class="sale"> 50% </span><br> </div>
               <p2>$250.00</p2>
               
+              <!--Quantity counter-->
               <div class="row padding add-to-cart-container">
                 <div class="left">
                   <div class="quantity">

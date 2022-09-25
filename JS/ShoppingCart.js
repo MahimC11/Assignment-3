@@ -47,6 +47,8 @@ function reset(){
   updateCart()
 }
 
+
+//This function updates the cart and also changes the quantity from an int into currency
 function updateCart() {
     if (quantity > 0){
       document.getElementById("empty").style.display="none"

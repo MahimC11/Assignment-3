@@ -363,12 +363,12 @@ img.hover-shadow {
 
 .left{
   float:left;
-  width:30%;
+  width:50%;
 }
 
 .right{
   float:right;
-  width: 70%;
+  width: 50%;
   align-items: right;
   text-align: right;
 }
@@ -376,4 +376,42 @@ img.hover-shadow {
 #add:hover,
 #remove:hover{
   opacity: 0.5;
+}
+
+
+/*Styles for mobile*/
+@media only screen and (max-width: 600px){
+  .img-size{
+    width:390px;
+    height:75%;
+    border-radius: 0;
+  }
+  #hide-thumbnail{
+    visibility:hidden;
+    display: none;
+  }
+  nav{
+    width:390px;
+  }
+  .align-right{
+    float:right;
+    text-align: right;
+    align-items: right;
+    margin-right: 5px;
+  }
+  .right{
+    display: flex;
+    width:100%;
+  }
+  .left{
+    display: flex;
+    width:100%;
+  }
+  h1  {
+    font-size: 28px;
+  }
+  .quantity{
+    height:60px;
+    width:286px
+  }
 }

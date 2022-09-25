@@ -1,10 +1,10 @@
-// This Function Opens the modal
+//Opens Modal
 function openModal() {
   document.getElementById("myModal").style.display = "block";
 }
 
 
-// This closes the modal
+//Closes Modal
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
 }
@@ -13,18 +13,16 @@ function closeModal() {
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// This is for the next and previous buttons
+//Next/Previous
 function plusSlides(n) {
   showSlides(slideIndex += n);   
 }
   
-
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
   
-
+//Changes the slide
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
